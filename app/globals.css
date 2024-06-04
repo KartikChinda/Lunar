@@ -4,3 +4,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .backgroundStyle {
+    background: linear-gradient(to right,
+        #F4F1E0 0%,
+        #F4F1E0 50%,
+        #321E1E 50%,
+        #321E1E 100%)
+  }
+}
