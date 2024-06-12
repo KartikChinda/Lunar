@@ -39,7 +39,7 @@ const Navbar = () => {
             <div className='w-[80%] flex justify-center items-center '>
                 <h1 className=''>
                     <GiMoon className='inline mr-2' />
-                    L U N A R
+                    <Link href="/">L U N A R</Link>
                 </h1>
             </div>
             <Link href="/cart" className='w-[9%] text-sm md:text-base flex justify-end items-center mr-2'>

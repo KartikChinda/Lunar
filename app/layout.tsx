@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className=" bg-palette-bg md:backgroundStyle text-palette-text">
+      <body className=" bg-palette-bg md:backgroundStyle text-palette-text overflow-x-hidden">
         <Navbar />
         {children}
       </body>

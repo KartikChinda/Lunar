@@ -9,12 +9,18 @@ const page = () => {
     const params = useParams();
     const watchID = params.id;
 
-    console.log(watchData)
+    console.log(watchID)
 
     return (
-        <section>
-            <div className='h-[86.5vh]'>
-                Here goes the main section
+        <section >
+            <div className='h-[86.5vh] group'>
+
+                <div className='absolute w-[51vw]  h-[86.8vh] transition-all duration-[1500ms] left-0 group-hover:left-[-52%] flex justify-center items-center bg-palette-text text-palette-bg'>
+                    <p className='relative left-24 lg:left-72 top-14  text-5xl font-text'>S A E A</p>
+                </div>
+                <div className='absolute w-[51vw]  h-[86.8vh] transition-all duration-[1500ms] left-[50%] group-hover:left-[100%] flex justify-center items-center bg-palette-bg text-palette-text'>
+                    <p className=' font-headings text-[350px] -skew-x-6 absolute left-20'>{`0${Number(watchID) + 1}`}</p>
+                </div>
             </div>
             <div>
                 <Footer />
