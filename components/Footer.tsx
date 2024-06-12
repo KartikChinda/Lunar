@@ -10,9 +10,9 @@ const Footer = () => {
     const params = useParams();
     const watchID = params.id;
 
-    const prevWatchRoute = watchID !== "0" ? Number(watchID) - 1 : Number(length);
+    const prevWatchRoute = watchID !== "0" ? Number(watchID) - 1 : Number(length - 1);
 
-    const nextWatchRoute = Number(watchID) === length ? 0 : Number(watchID) + 1;
+    const nextWatchRoute = Number(watchID) === length - 1 ? 0 : Number(watchID) + 1;
 
     return (
         <div >

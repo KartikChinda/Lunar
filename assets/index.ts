@@ -11,6 +11,6 @@ import ten from "./9.png";
 import zero from "./0.png";
 
 
-export const images = [one, two, three, four, five, six, seven, eight, nine, zero, ten];
+export const images = [one, eight, nine, zero, ten, two, three, four, five, six, seven];
 
 export const length = images.length; 
