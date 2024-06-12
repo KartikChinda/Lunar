@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react';
 
 // image imports
-import images from '@/assets';
+import { images } from '@/assets';
 import "./gallery.css"
 import Link from 'next/link';
 
