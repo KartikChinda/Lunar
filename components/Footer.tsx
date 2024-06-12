@@ -25,7 +25,11 @@ const Footer = () => {
                         <IoCaretForwardOutline />
                     </Link>
                 </div>
-                <div>This is the share this product</div>
+                {/* <div>
+                    <button>
+
+                    </button>
+                </div> */}
                 <div>Add to cart</div>
             </div>
 

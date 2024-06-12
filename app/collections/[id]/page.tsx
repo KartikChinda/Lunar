@@ -4,6 +4,8 @@ import React from 'react'
 import { watchData } from '@/assets/watchUtil';
 import Footer from '@/components/Footer';
 import WatchImage from '@/components/WatchImage';
+import WatchInformation from '@/components/WatchInformation';
+
 
 const page = () => {
 
@@ -27,8 +29,8 @@ const page = () => {
 
                 {/* Here is the code for the underlying website */}
                 <div className='w-[50vw] flex justify-center items-center'>
-                    {/* <WatchInformation /> */}
-                    watch info
+                    <WatchInformation />
+
                 </div>
                 <div className='w-[50vw] flex justify-center items-center'>
                     {/* watch image */}
