@@ -12,6 +12,7 @@ const config: Config = {
         bg: "#F4F1E0",
         text: "#321E1E",
         lines: "#BDB498",
+        pink: "#fe019a",
       },
     },
     extend: {
