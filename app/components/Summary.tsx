@@ -4,11 +4,13 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../store'
 import Link from 'next/link'
 
+
 const Summary = () => {
 
     const [price, setprice] = useState(0)
     const [totalPrice, settotalPrice] = useState(price)
     const [discountCode, setdiscountCode] = useState("");
+    const [isDiscountApplied, setisDiscountApplied] = useState(false)
     const cartProducts = useSelector((state: RootState) => state.cart.items);
 
     const discountref = useRef<HTMLDivElement>(null);
@@ -19,12 +21,13 @@ const Summary = () => {
             currentPrice += parseInt(currentProduct.price) * currentProduct.quantity;
         })
         setprice(currentPrice);
-        settotalPrice(currentPrice);
+        isDiscountApplied ? settotalPrice(currentPrice * 0.85) : settotalPrice(currentPrice);
     }
 
     useEffect(() => {
-        calculatePrice()
-    }, [cartProducts]);
+        calculatePrice();
+        // settotalPrice(price);
+    }, [cartProducts, isDiscountApplied]);
 
 
     const applyDiscount = () => {
@@ -37,7 +40,7 @@ const Summary = () => {
                 if (discountref.current) {
                     discountref.current.textContent = "Code applied!"
                 }
-                settotalPrice(price * 0.85)
+                setisDiscountApplied(true);
             }, 1500);
 
 
