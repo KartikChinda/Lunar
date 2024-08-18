@@ -8,3 +8,19 @@ export interface ProductFields {
         count: number;
     }
 }
+
+export interface CartItem {
+    id: number;
+    name: string;
+    price: string;
+    quantity: number;
+    description: string,
+    rating: {
+        range: string,
+        count: number,
+    }
+}
+
+export interface CartState {
+    items: CartItem[];
+}

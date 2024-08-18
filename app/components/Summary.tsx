@@ -16,7 +16,7 @@ const Summary = () => {
     const calculatePrice = () => {
         let currentPrice = 0;
         cartProducts.map((currentProduct) => {
-            currentPrice += currentProduct.price * currentProduct.quantity;
+            currentPrice += parseInt(currentProduct.price) * currentProduct.quantity;
         })
         setprice(currentPrice);
     }
