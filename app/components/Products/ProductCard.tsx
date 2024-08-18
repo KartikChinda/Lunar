@@ -5,22 +5,7 @@ import { images } from '@/constants/watchImages';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/app/store/slices/cartSlice';
 import { useRef } from 'react';
-
-
-
-interface ProductFields {
-    id: number,
-    name: string;
-    price: string;
-    description: string;
-    category: string;
-    image: string;
-    rating: {
-        range: number;
-        count: number;
-    }
-
-}
+import { ProductFields } from '@/interfaces';
 
 const ProductCard = ({ product }: { product: ProductFields }) => {
 
