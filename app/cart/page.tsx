@@ -17,9 +17,9 @@ const page = () => {
     return (
         <div>
             {cartProducts && cartProducts.length > 0 ?
-                <div className='min-h-screen flex flex-col md:flex-row  justify-center md:justify-between items-center'>
+                <div className='min-h-screen flex flex-col md:flex-row  justify-center  items-start'>
                     {/* products */}
-                    <div className='w-full md:w-[50%] p-2 min-h-[80vh]  flex flex-col gap-2'>
+                    <div className='w-full md:w-[50%] p-2 md:min-h-[80vh]  flex flex-col gap-2'>
                         {cartProducts.map((product) => {
                             return (
                                 <div>
@@ -31,7 +31,7 @@ const page = () => {
 
 
                     {/* billing */}
-                    <div className='w-full md:w-[50%] p-2   flex flex-col justify-start items-center min-h-[80vh]'>
+                    <div className='w-full md:w-[50%] p-2 flex flex-col justify-start items-start '>
                         <Summary />
                     </div>
                 </div>

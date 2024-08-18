@@ -12,9 +12,7 @@ const CartProduct = ({ product }: { product: CartItem }) => {
 
     const RemoveFromCart = () => {
         dispatch(removeFromCart(product.id));
-        if (notificationRef.current) {
-            notificationRef.current.textContent = "Removing item..."
-        }
+
     }
 
     const increaseQuantity = () => {
