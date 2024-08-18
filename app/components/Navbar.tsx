@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className='text-palette-bg w-[10%] hidden md:block'>
 
             </div>
-            <div className='w-[80%] flex justify-start md:justify-center items-center '>
+            <div className='w-[80%] flex justify-start md:justify-center items-center font-headings'>
                 <h1 className=''>
                     <Link href="/">Lunar</Link>
                 </h1>
