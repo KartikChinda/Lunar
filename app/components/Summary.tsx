@@ -94,13 +94,13 @@ const Summary = () => {
             </div>
 
             <div className='w-[90%] flex justify-center'>
-                <button onClick={applyDiscount} className='font-text rounded-xl w-full p-2 border-2 bg-palette-bg text-palette-text hover:text-palette-bg hover:bg-palette-text hover:scale-105 duration-150 mt-10'>
-                    <Link href={"/checkout"}>
-                        Proceed to checkout
-                    </Link>
+
+                <Link className='font-text rounded-xl w-full p-2 border-2 bg-palette-bg text-palette-text hover:text-palette-bg hover:bg-palette-text hover:scale-105 duration-150 mt-10' href={"/checkout"}>
+                    Proceed to checkout
+                </Link>
 
 
-                </button>
+
             </div>
         </div >
 
