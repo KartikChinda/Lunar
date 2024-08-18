@@ -4,6 +4,7 @@ import React from 'react';
 import { images } from '@/constants/watchImages';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/app/store/slices/cartSlice';
+import { useRef } from 'react';
 
 
 
@@ -25,8 +26,23 @@ const ProductCard = ({ product }: { product: ProductFields }) => {
 
     const dispatch = useDispatch();
 
+    const notificationRef = useRef<HTMLDivElement>(null)
+
     const handleAdditionToCart = () => {
         dispatch(addToCart(product));
+        if (notificationRef.current) {
+            notificationRef.current.textContent = "Adding item..."
+        }
+        setTimeout(() => {
+            if (notificationRef.current) {
+                notificationRef.current.textContent = "Item added!"
+            }
+        }, 2000);
+        setTimeout(() => {
+            if (notificationRef.current) {
+                notificationRef.current.textContent = "Add to cart"
+            }
+        }, 3500);
     }
 
 
@@ -51,7 +67,9 @@ const ProductCard = ({ product }: { product: ProductFields }) => {
                         ₹ {product.price}
                     </div>
                     <button onClick={handleAdditionToCart} className='font-text rounded-xl p-2 border-2 bg-palette-text text-palette-bg hover:text-palette-text hover:bg-palette-bg duration-150'>
-                        Add to Cart
+                        <div ref={notificationRef}>
+                            Add to Cart
+                        </div>
                     </button>
 
                 </div>
