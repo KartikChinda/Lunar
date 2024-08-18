@@ -28,23 +28,36 @@ const cartSlice = createSlice({
             } else {
                 state.items.push({ ...product, quantity: 1 });
             }
-            saveCartToLocalStorage(state.items);
+            if (typeof window !== 'undefined') {
+
+                saveCartToLocalStorage(state.items);
+            }
+
             // console.log('Updated cart state:', JSON.stringify(state, null, 2));
         },
         removeFromCart(state, action) {
             state.items = state.items.filter(item => item.id !== action.payload)
-            saveCartToLocalStorage(state.items);
+            if (typeof window !== 'undefined') {
+
+                saveCartToLocalStorage(state.items);
+            }
         },
 
         increaseItemQuantity(state, action) {
             const itemIndex = state.items.findIndex(item => item.id === action.payload);
             state.items[itemIndex].quantity += 1;
-            saveCartToLocalStorage(state.items);
+            if (typeof window !== 'undefined') {
+
+                saveCartToLocalStorage(state.items);
+            }
         },
         decreaseItemQuantity(state, action) {
             const itemIndex = state.items.findIndex(item => item.id === action.payload);
             state.items[itemIndex].quantity -= 1;
-            saveCartToLocalStorage(state.items);
+            if (typeof window !== 'undefined') {
+
+                saveCartToLocalStorage(state.items);
+            }
         }
     }
 
