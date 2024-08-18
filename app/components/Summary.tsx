@@ -72,7 +72,7 @@ const Summary = () => {
                 <p>
                     Discount code:
                 </p>
-                <input className=' bg-palette-text text-palette-bg' onChange={(e) => {
+                <input placeholder='Enter coupon code.' className=' bg-palette-text text-palette-bg' onChange={(e) => {
                     setdiscountCode(e.target.value);
                 }}>
                 </input>
