@@ -1,11 +1,13 @@
 "use client";
 import React, { useEffect, useState } from 'react'
-import { DotLoader, PacmanLoader } from 'react-spinners';
+import { DotLoader } from 'react-spinners';
+import ProductCard from './ProductCard';
+import watchData from '../../../constants/watchData.json'
 
 
 const ProductsList = () => {
 
-    const [products, setproducts] = useState([]);
+    const [products, setproducts] = useState<any[]>([]);
     const [loading, setloading] = useState(true);
 
 
@@ -13,11 +15,12 @@ const ProductsList = () => {
         const fetchProducts = async () => {
             try {
                 setloading(true);
-                const response = await fetch("https://fakestoreapi.com/products");
-                let data = await response.json();
+                // const response = await fetch("https://fakestoreapi.com/products");
+                // let data = await response.json();
 
-                console.log(data);
-                setproducts(data.splice(0, 12));
+                // console.log(data);
+                // setproducts(data.splice(0, 12));
+                setproducts(watchData);
                 setloading(false);
 
             } catch (error) {
@@ -43,11 +46,11 @@ const ProductsList = () => {
 
             {products && products.length > 0 ?
 
-                <div className='w-full flex flex-wrap '>
+                <div className='flex flex-wrap'>
                     {products.map((product) => {
                         return (
-                            <div className='h-[30vh] w-[100%] md:w-[50%] lg:w-[25%] flex justify-center items-center border-[1.3px] border-palette-lines'>
-                                hello
+                            <div className='h-[50vh] w-[100%] md:w-[50%] lg:w-[33.3%] flex justify-center items-center border-[1.3px] border-palette-lines'>
+                                <ProductCard product={product} />
                             </div>
                         )
                     })}

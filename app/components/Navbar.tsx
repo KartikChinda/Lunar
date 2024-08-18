@@ -12,7 +12,7 @@ const Navbar = () => {
             </div>
             <div className='w-[80%] flex justify-start md:justify-center items-center '>
                 <h1 className=''>
-                    <Link href="/">We Sell It All</Link>
+                    <Link href="/">Lunar</Link>
                 </h1>
             </div>
             <Link href="/cart" className='w-[9%] text-sm md:text-base flex justify-center items-center mr-2'>

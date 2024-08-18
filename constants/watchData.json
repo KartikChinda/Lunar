@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Lunar 1",
+        "price": "6700",
+        "description": "This is watch 1",
+        "rating": {
+            "range": "4.2",
+            "count": 120
+        }
+    },
+    {
+        "id": 2,
+        "name": "Lunar 2",
+        "price": "8900",
+        "description": "This is watch 2",
+        "rating": {
+            "range": "4.4",
+            "count": 20
+        }
+    },
+    {
+        "id": 3,
+        "name": "Lunar 3",
+        "price": "6000",
+        "description": "This is watch 3",
+        "rating": {
+            "range": "4.5",
+            "count": 160
+        }
+    },
+    {
+        "id": 4,
+        "name": "Lunar 4",
+        "price": "8800",
+        "description": "This is watch 1",
+        "rating": {
+            "range": "4.2",
+            "count": 120
+        }
+    },
+    {
+        "id": 5,
+        "name": "Lunar 5",
+        "price": "9000",
+        "description": "This is watch 5",
+        "rating": {
+            "range": "4.1",
+            "count": 40
+        }
+    },
+    {
+        "id": 6,
+        "name": "Lunar 6",
+        "price": "7500",
+        "description": "This is watch 6",
+        "rating": {
+            "range": "4.2",
+            "count": 112
+        }
+    },
+    {
+        "id": 7,
+        "name": "Lunar 7",
+        "price": "5600",
+        "description": "This is watch 6",
+        "rating": {
+            "range": "4.6",
+            "count": 54
+        }
+    },
+    {
+        "id": 8,
+        "name": "Lunar 8",
+        "price": "7300",
+        "description": "This is watch 8",
+        "rating": {
+            "range": "3.9",
+            "count": 87
+        }
+    },
+    {
+        "id": 9,
+        "name": "Lunar 9",
+        "price": "9200",
+        "description": "This is watch 9",
+        "rating": {
+            "range": "4.5",
+            "count": 87
+        }
+    }
+]
