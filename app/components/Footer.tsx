@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="flex justify-center items-center">
                 {/* Large "Houseplant" Text */}
                 <h1 className=" group-hover:text-palette-pink font-headings text-white text-6xl md:text-[150px] font-bold mt-4 duration-150 lg:tracking-widest">
-                    L U N A R <span className='text-xl tracking-tighter -ml-4'>TM</span>
+                    L U N A R <span className='text-xl tracking-tighter'>TM</span>
                 </h1>
             </div>
         </footer>
