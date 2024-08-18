@@ -1,6 +1,5 @@
 "use client";
 import { createSlice } from "@reduxjs/toolkit";
-
 import { CartItem, CartState } from "@/interfaces";
 
 const loadCartIfInLocalStorage = () => {

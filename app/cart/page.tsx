@@ -12,7 +12,7 @@ const page = () => {
 
 
 
-    console.log("these are the products", cartProducts);
+    // console.log("these are the products", cartProducts);
 
     return (
         <div>

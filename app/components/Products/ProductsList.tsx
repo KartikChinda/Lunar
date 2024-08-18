@@ -49,7 +49,7 @@ const ProductsList = () => {
                 <div className='flex flex-wrap'>
                     {products.map((product) => {
                         return (
-                            <div className='h-[50vh] w-[100%] md:w-[50%] lg:w-[33.3%] flex justify-center items-center border-[1.3px] border-palette-lines'>
+                            <div className='h-[50vh] md:h-[70vh] w-[100%] md:w-[50%] lg:w-[33.3%] flex justify-center items-center border-[1.3px] border-palette-lines'>
                                 <ProductCard product={product} />
                             </div>
                         )

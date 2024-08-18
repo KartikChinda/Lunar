@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
+import { GiMoon } from 'react-icons/gi';
 
 const Navbar = () => {
 
@@ -24,6 +25,7 @@ const Navbar = () => {
             </div>
             <div className='w-[80%] flex justify-start md:justify-center items-center font-headings'>
                 <h1 className=''>
+                    <GiMoon className='inline mr-2' />
                     <Link href="/">Lunar</Link>
                 </h1>
             </div>
