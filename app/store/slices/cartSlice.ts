@@ -4,12 +4,20 @@ import { createSlice } from "@reduxjs/toolkit";
 import { CartItem, CartState } from "@/interfaces";
 
 const loadCartIfInLocalStorage = () => {
-    const cartData = localStorage.getItem('cart');
-    return cartData ? JSON.parse(cartData) : [];;
+    if (typeof window !== 'undefined') {
+        const cartData = localStorage.getItem('cart');
+        return cartData ? JSON.parse(cartData) : [];
+    }
+
+    return [];
+
+
 };
 
 const saveCartToLocalStorage = (cartItems: CartItem[]) => {
-    localStorage.setItem('cart', JSON.stringify(cartItems));
+    if (typeof window !== 'undefined') {
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+    }
 };
 
 const initialState: CartState = {
