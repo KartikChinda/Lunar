@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { images } from '@/constants/watchImages'
 import Image from 'next/image'
-import { removeFromCart } from '@/app/store/slices/cartSlice'
+import { decreaseItemQuantity, increaseItemQuantity, removeFromCart } from '@/app/store/slices/cartSlice'
 
 const CartProduct = ({ product }: { product: CartItem }) => {
     const notificationRef = useRef<HTMLDivElement>(null)
@@ -18,11 +18,14 @@ const CartProduct = ({ product }: { product: CartItem }) => {
     }
 
     const increaseQuantity = () => {
-
+        dispatch(increaseItemQuantity(product.id));
     }
 
     const decreaseQuantity = () => {
-
+        dispatch(decreaseItemQuantity(product.id));
+        if (product.quantity === 1) {
+            dispatch(removeFromCart(product.id));
+        }
     }
 
 
