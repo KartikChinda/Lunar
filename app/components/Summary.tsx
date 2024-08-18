@@ -19,6 +19,7 @@ const Summary = () => {
             currentPrice += parseInt(currentProduct.price) * currentProduct.quantity;
         })
         setprice(currentPrice);
+        settotalPrice(currentPrice);
     }
 
     useEffect(() => {

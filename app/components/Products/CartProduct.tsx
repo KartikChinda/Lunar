@@ -1,29 +1,28 @@
 import React from 'react'
-import { ProductFields } from '@/interfaces'
+import { CartItem } from '@/interfaces'
 import { useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { images } from '@/constants/watchImages'
 import Image from 'next/image'
+import { removeFromCart } from '@/app/store/slices/cartSlice'
 
-const CartProduct = ({ product }: { product: ProductFields }) => {
+const CartProduct = ({ product }: { product: CartItem }) => {
     const notificationRef = useRef<HTMLDivElement>(null)
     const dispatch = useDispatch();
 
     const RemoveFromCart = () => {
-        // dispatch(addToCart(product));
-        // if (notificationRef.current) {
-        //     notificationRef.current.textContent = "Adding item..."
-        // }
-        // setTimeout(() => {
-        //     if (notificationRef.current) {
-        //         notificationRef.current.textContent = "Item added!"
-        //     }
-        // }, 2000);
-        // setTimeout(() => {
-        //     if (notificationRef.current) {
-        //         notificationRef.current.textContent = "Add to cart"
-        //     }
-        // }, 3500);
+        dispatch(removeFromCart(product.id));
+        if (notificationRef.current) {
+            notificationRef.current.textContent = "Removing item..."
+        }
+    }
+
+    const increaseQuantity = () => {
+
+    }
+
+    const decreaseQuantity = () => {
+
     }
 
 
@@ -50,8 +49,13 @@ const CartProduct = ({ product }: { product: ProductFields }) => {
                         <div ref={notificationRef}>
                             Remove from Cart
                         </div>
-                    </button>
 
+                    </button>
+                    <div className='flex justify-center items-center gap-2 '>
+                        <button onClick={increaseQuantity} className='text-xl font-black border-2 rounded-full p-2 bg-palette-text text-palette-bg'>+</button>
+                        <p className='font-bold text-xl'>{product.quantity}</p>
+                        <button onClick={decreaseQuantity} className='text-xl font-black border-2 rounded-xl p-2 bg-palette-text text-palette-bg'>-</button>
+                    </div>
                 </div>
             </div>
 

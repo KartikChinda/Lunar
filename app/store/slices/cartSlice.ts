@@ -21,13 +21,24 @@ const cartSlice = createSlice({
             } else {
                 state.items.push({ ...product, quantity: 1 });
             }
-
             // console.log('Updated cart state:', JSON.stringify(state, null, 2));
+        },
+        removeFromCart(state, action) {
+            state.items = state.items.filter(item => item.id !== action.payload)
+        },
+
+        increaseItemQuantity(state, action) {
+            const itemIndex = state.items.findIndex(item => item.id === action.payload);
+            state.items[itemIndex].quantity += 1;
+        },
+        decreaseItemQuantity(state, action) {
+            const itemIndex = state.items.findIndex(item => item.id === action.payload);
+            state.items[itemIndex].quantity -= 1;
         }
     }
 
 })
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, removeFromCart } = cartSlice.actions;
 
 export default cartSlice.reducer; 
